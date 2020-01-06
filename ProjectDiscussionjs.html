@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Vysali Pughazhendi's Portfolio</title>
+<link rel="stylesheet" type="text/css" href="portfolio.css">
+<script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
+</head>
+<body>
+    <div>
+        <h2>Have a Project you'd like to discuss</h2>
+
+        <form method="post" id="projectForm" action="">
+
+          Name:<br>
+          <input type="text" name="name" placeholder="Enter a valid name">
+          <br>
+          Email:<br>
+          <input type="text" name="email" placeholder="Enter a valid email">
+          <br>
+          Message:<br>
+          <textarea rows="4" cols="50" name="message" form="projectForm" placeholder="Message">
+        </textarea>
+          <br>
+          <br>
+          <input type="submit" value="SEND">
+        </form>
+    </div>
+    /* javascript validation */
+    <script language="JavaScript">
+
+    var frmvalidator  = new Validator("myemailform");
+    frmvalidator.addValidation("name","req","Please provide your name");
+    frmvalidator.addValidation("email","req","Please provide your email");
+    frmvalidator.addValidation("email","email","Please enter a valid email address");
+    </script>
+
+
+</body>
+</html>

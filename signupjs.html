@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Vysali Pughazhendi's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="portfolio.css">
+</head>
+
+<body style="background-color: white">
+  <div id="SignupForm">
+
+
+    <h2>CHECK IN</h2>
+
+    <form action="" method="post">
+
+
+      <div class="container">
+        <div id="errorMessage" class="alert alert-danger">
+          <div id="FirstName">Please enter a valid first name</div>
+          <div id="LastName">Please enter a valid Last name</div>
+        </div>
+        <label for="fname"><b>First Name</b></label>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" placeholder="Enter First Name" id="fname" name="fname">
+        <br>
+        <label for="lname"><b>Last Name</b></label>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" placeholder="Enter Last Name" name="lname" id="lname">
+        <br>
+        <label for="email"><b>Email</b></label>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" placeholder="Enter Email" name="email"  required>
+        <br>
+        <label for="psw"><b>Password</b></label>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="password" placeholder="Enter Password" name="psw" id="psw">
+        <br>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat">
+        <br>
+        <br>
+        <div class="clearfix">
+          <button type="button" class="cancelbtn" onclick="form.reset()">Reset</button>
+          <button type="submit" class="signupbtn login" onclick="validateForm()">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    var error = document.getElementById('errorMessage');
+    var FirstNameErr = document.getElementById('FirstName');
+    var LastNameErr = document.getElementById('LastName');
+
+    window.onload = function () {
+      error.style.visibility = "hidden";
+      FirstNameErr.style.visibility = "hidden";
+      LastNameErr.style.visibility = "hidden";
+    };
+    function validateForm()
+    {
+      error.style.visibility = "hidden";
+      FirstNameErr.style.visibility = "hidden";
+      LastNameErr.style.visibility = "hidden";
+
+      var regName = /^[a-zA-Z]+$/;
+      //first Name
+      var fname = document.getElementById('fname').value;
+      if (!regName.test(fname))
+      {
+        error.style.visibility = "visible";
+        FirstNameErr.style.visibility = "visible";
+        LastNameErr.style.visibility = "hidden";
+      }
+
+      //Last Name
+      var lname = document.getElementById('lname').value;
+      if (!regName.test(lname))
+      {
+        error.style.visibility = "visible";
+        FirstNameErr.style.visibility = "hidden";
+        LastNameErr.style.visibility = "visible";
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>

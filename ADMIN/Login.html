@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Vysali Pughazhendi's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="portfolio.css">
+</head>
+
+<body style="background-color: white" >
+  <div id="id01">
+
+    <form action="" method="post">
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        <div id="passwordError" style="color:red">Password is minimum 8 characters </div>
+        <br>
+        <button type="submit" class="login" onclick="validateForm()">Login</button>
+        <button type="button" class="cancelbtn" onclick="form.reset()">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+
+
+</body>
+
+</html>
